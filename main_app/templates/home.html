@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XTF File Upload</title>
+</head>
+<body>
+    <h1>Upload XTF Format File</h1>
+    
+
+    
+    <form action="{% url 'file_upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file">
+        <button type="submit">Upload</button>
+    </form>
+
+</body>
+</html>
